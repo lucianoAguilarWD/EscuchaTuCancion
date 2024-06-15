@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_app"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="32dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MenuActivity">
+
+    <Button
+        android:id="@+id/btnInformation"
+        android:layout_width="320dp"
+        android:layout_height="80dp"
+        android:background="@color/background_fab"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="@string/information"/>
+
+    <Button
+        android:id="@+id/btnMusicalGenre"
+        android:layout_marginTop="16dp"
+        android:layout_width="320dp"
+        android:layout_height="80dp"
+        android:background="@color/background_fab"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="@string/Musical_genres"/>
+
+</LinearLayout>

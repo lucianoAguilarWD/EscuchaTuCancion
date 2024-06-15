@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">EscuchaTuCancion</string>
+    <string name="information">Información de la App</string>
+    <string name="Musical_genres">Géneros Musicales</string>
+    <string name="genre_rock">Rock</string>
+    <string name="genre_metal">Metal</string>
+    <string name="genre_Tango">Tango</string>
+    <string name="genre_folk">Folclore</string>
+    <string name="home">Inicio</string>
 </resources>

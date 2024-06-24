@@ -2,14 +2,11 @@ package com.example.escuchatucancion;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.viewpager2.widget.ViewPager2;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class SwipeAlbumActivity extends AppCompatActivity {

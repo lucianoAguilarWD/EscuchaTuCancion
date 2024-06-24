@@ -1,24 +1,42 @@
 package com.example.escuchatucancion;
 
+import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.cardview.widget.CardView;
+
 
 public class InformationActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_information);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
+        initializeUI();
+    }
+
+    private void initializeUI() {
+        CardView volverAInicio = findViewById(R.id.home);
+        CardView genres = findViewById(R.id.genres);
+
+        setNavigateTo(volverAInicio, this::navigateToMenu);
+        setNavigateTo(genres, this::navigateToGenre);
+
+    }
+
+    private void setNavigateTo(CardView cardView, Runnable action) {
+        cardView.setOnClickListener(v -> action.run());
+    }
+
+    private void navigateToGenre(){
+        Intent intent = new Intent(InformationActivity.this, MusicGenresActivity.class);
+        startActivity(intent);
+    }
+
+    // Método para navegar al menú
+    private void navigateToMenu() {
+        Intent intent = new Intent(InformationActivity.this, MenuActivity.class);
+        startActivity(intent);
     }
 }

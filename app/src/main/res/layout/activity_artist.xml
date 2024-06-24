@@ -5,6 +5,256 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ArtistActivity">
+    android:background="@color/background_app"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="32dp"
+    >
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:text="@string/artist"
+        android:textAllCaps="true"
+        android:textColor="@color/title_text" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/artista1"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/background_component"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/artista2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivArtista1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription=""
+                android:src="@drawable/ic_artist"
+                />
+
+            <TextView
+                android:id="@+id/tvArtista1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                tools:text="artista1"
+                android:textColor="@color/title_text" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/artista2"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/background_component"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/artista1"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivArtista2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription=""
+                android:src="@drawable/ic_artist"
+                />
+
+            <TextView
+                android:id="@+id/tvArtista2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                tools:text="artista2"
+                android:textColor="@color/title_text" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/artista3"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/background_component"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/artista1"
+        app:layout_constraintEnd_toStartOf="@+id/artista4">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivArtista3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription=""
+                android:src="@drawable/ic_artist" />
+
+            <TextView
+                android:id="@+id/tvArtista3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="artista3"
+                android:textColor="@color/title_text" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/artista4"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        app:cardBackgroundColor="@color/background_component"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/artista2"
+        app:layout_constraintStart_toEndOf="@+id/artista3">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivArtista4"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription=""
+                tools:src="@drawable/ic_artist" />
+
+            <TextView
+                android:id="@+id/tvArtista4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                tools:text="artista4"
+                android:textColor="@color/title_text" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardBackgroundColor="@color/background_component_selected"
+        app:cardCornerRadius="16dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/back"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="16dp"
+                app:cardBackgroundColor="@color/background_component"
+                app:cardCornerRadius="16dp"
+                >
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:contentDescription=""
+                        android:src="@drawable/ic_back"
+                        app:tint="@color/title_text" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/back"
+                        android:textColor="@color/title_text" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/home"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:cardBackgroundColor="@color/background_component"
+                app:cardCornerRadius="16dp"
+                >
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:contentDescription=""
+                        android:src="@drawable/ic_home"
+                        app:tint="@color/title_text" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/home"
+                        android:textColor="@color/title_text" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,14 +15,46 @@ public class MusicGenresActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_music_genres);
-        CardView volverAInicio = findViewById(R.id.home);
-        volverAInicio.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MusicGenresActivity.this, MenuActivity.class);
-                startActivity(intent);
-            }
 
-        });
+        initializeUI();
     }
+
+    // Método para inicializar los componentes de la UI
+    // Inicializar los componentes de la UI
+    private void initializeUI() {
+        CardView volverAInicio = findViewById(R.id.home);
+        CardView rock = findViewById(R.id.genre_rock);
+        CardView metal = findViewById(R.id.genre_metal);
+        CardView hard = findViewById(R.id.genre_hard);
+        CardView power = findViewById(R.id.genre_power);
+        // según el botón que sea presionado envia al usuario a las pantallas con información sobre el genero seleccionado
+        setNavigateTo(volverAInicio, this::navigateToMenu);
+        setNavigateToWithGenre(rock, "Rock");
+        setNavigateToWithGenre(metal, "Metal");
+        setNavigateToWithGenre(hard, "Hard");
+        setNavigateToWithGenre(power, "Power");
+    }
+
+    // Método para configurar el listener del botón de inicio
+    private void setNavigateTo(CardView cardView, Runnable action) {
+        cardView.setOnClickListener(v -> action.run());
+    }
+
+    private void setNavigateToWithGenre(CardView cardView, String genre) {
+        cardView.setOnClickListener(v -> navigateToArtist(genre));
+    }
+
+    // Método para navegar al menú
+    private void navigateToMenu() {
+        Intent intent = new Intent(MusicGenresActivity.this, MenuActivity.class);
+        startActivity(intent);
+    }
+
+
+    private void navigateToArtist(String genre) {
+        Intent intent = new Intent(MusicGenresActivity.this, ArtistActivity.class);
+        intent.putExtra("GENRE", genre);
+        startActivity(intent);
+    }
+
 }

@@ -1,10 +1,31 @@
 <resources>
-    <string name="app_name">EscuchaTuCancion</string>
+    <string name="app_name">Escucha Tu Canción</string>
     <string name="information">Información de la App</string>
+    <string name="author">Autor: Aguilar Luciano Ivan</string>
+    <string name="description">La aplicación móvil creada es un reproductor de música diseñado con el objetivo de aprender a trabajar con Android Studio utilizando Java. La aplicación incluye géneros de rock y presenta bandas representativas de cada uno de estos géneros. Para la creación de la misma, se utilizo Fragments, Swipes y el reproductor MediaPlayer que ofrece Android Studio.</string>
+
+    <!-- Titulos -->
     <string name="Musical_genres">Géneros Musicales</string>
+    <string name="artist">Artistas</string>
+    <string name="albums">Albums</string>
+
+
+    <!-- Botones -->
+    <string name="home">Inicio</string>
+    <string name="back">Volver</string>
+    <string name="genres">Géneros</string>
+
+
+    <!-- Descripciones -->
+    <string name="ds_play">Iniciar Canción</string>
+    <string name="ds_pause">Pausar Canción</string>
+
+
+    <!-- Generos -->
     <string name="genre_rock">Rock</string>
     <string name="genre_metal">Metal</string>
-    <string name="genre_Tango">Tango</string>
-    <string name="genre_folk">Folclore</string>
-    <string name="home">Inicio</string>
+    <string name="genre_hard">Hard</string>
+    <string name="genre_power">Power</string>
+
+
 </resources>
